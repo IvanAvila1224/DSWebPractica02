@@ -106,6 +106,11 @@ if (isset($_GET['eliminar'])) {
 
             return true;
         }
+        function borrarCampos() {
+        document.getElementsByName("nombre")[0].value = "";
+        document.getElementsByName("direccion")[0].value = "";
+        document.getElementsByName("telefono")[0].value = "";
+    }
     </script>
 </head>
 <body>
@@ -130,6 +135,7 @@ if (isset($_GET['eliminar'])) {
         <input type="hidden" name="idEditar" value="<?php echo isset($idEditar) ? $idEditar : ''; ?>">
         <input type="submit" class="button asigCompeButton" name="submitInsert" value="Guardar">
         <input type="submit" class="button asigCompeButton" name="submitUpdate" value="Actualizar">
+        <button class="button asigCompeButton" type="button" onclick="borrarCampos();">Borrar Campos</button>
     </form>
 
     <?php
