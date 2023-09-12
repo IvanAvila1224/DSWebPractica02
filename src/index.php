@@ -165,7 +165,7 @@ if (isset($_GET['eliminar'])) {
                 echo '<td>' . $row['telefono'] . '</td>';
                 echo '<td><a href="index.php?editar=' . $row['clave'] . '">Editar</a></td>';
 
-                // Agrega la confirmación de eliminación aquí
+                
                 echo '<td><a href="index.php?eliminar=' . $row['clave'] . '" onclick="return confirmarEliminacion();">Eliminar</a></td>';
 
                 echo '</tr>';
