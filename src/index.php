@@ -1,9 +1,13 @@
 <?php
 session_start();
 
-// Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
-    // Si no está autenticado, redirige a la página de inicio de sesión
+    header('Location: login.php');
+    exit();
+}
+
+if (isset($_POST['cerrar_sesion'])) {
+    session_destroy();
     header('Location: login.php');
     exit();
 }
@@ -123,7 +127,12 @@ if (isset($_GET['eliminar'])) {
     </script>
 </head>
 <body>
-    <form action="index.php" method="POST" autocomplete="off" onsubmit="return validarFormulario();">
+    <div class="logout-button">
+        <form method="POST" action="">
+            <input type="submit"  name="cerrar_sesion" value="Cerrar Sesión">
+        </form>
+    </div>
+    <form action="index.php" method="POST" autocomplete="off" name="form" onsubmit="return validarFormulario();">
         <h1>INGRESA LOS DATOS DEL FORMULARIO</h1>
         <div>
             <table>
