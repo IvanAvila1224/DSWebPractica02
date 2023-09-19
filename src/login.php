@@ -16,12 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
     if ($usuario) {
+        
         $_SESSION['usuario_id'] = $usuario['clave'];
         header('Location: index.php'); 
         exit();
-    } else {
-        $_SESSION['usuario_no_existe'] = true;
-    }
+    } 
 }
 ?>
 
@@ -40,15 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 alert("Por favor, completa todos los campos.");
                 return false; 
             }
-            
-            
-            <?php
-            if (isset($_SESSION['usuario_no_existe']) && $_SESSION['usuario_no_existe']) {
-                echo "alert('El usuario no existe.');";
-                $_SESSION['usuario_no_existe'] = false; 
-                echo "return false;";
-            }
-            ?>
             
             return true; 
         }
