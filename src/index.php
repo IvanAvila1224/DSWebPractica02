@@ -99,7 +99,7 @@ if (isset($_GET['eliminar'])) {
 <html lang="es">
 <head>
     <meta charset="UTF-8" /> 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style_index.css">
     <title>REGISTRO</title>
     
     <script>
@@ -127,9 +127,9 @@ if (isset($_GET['eliminar'])) {
     </script>
 </head>
 <body>
-    <div class="logout-button">
+    <div >
         <form method="POST" action="">
-            <input type="submit"  name="cerrar_sesion" value="Cerrar Sesión">
+            <input class="logout-button" type="submit"  name="cerrar_sesion" value="Cerrar Sesión">
         </form>
     </div>
     <form action="index.php" method="POST" autocomplete="off" name="form" onsubmit="return validarFormulario();">

@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
         function validarFormulario() {
             var nombreUsuario = document.getElementById("nombre_usuario").value;
