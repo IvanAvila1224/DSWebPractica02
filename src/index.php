@@ -1,4 +1,13 @@
 <?php
+session_start();
+
+// Verificar si el usuario está autenticado
+if (!isset($_SESSION['usuario_id'])) {
+    // Si no está autenticado, redirige a la página de inicio de sesión
+    header('Location: login.php');
+    exit();
+}
+
 $url = "pgsql:host=172.17.0.2;port=5432;dbname=mydb;";
 $pdo = new PDO($url, "postgres", "password", [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
