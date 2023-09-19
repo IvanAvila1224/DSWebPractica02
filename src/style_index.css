@@ -1,24 +1,24 @@
-/* Reset de estilos para eliminar el margen y el relleno predeterminados */
+
 body, h1, h2, form, table {
     margin: 0;
     padding: 0;
 }
 
-/* Estilo para el cuerpo de la página */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
 }
 
-/* Estilo para el encabezado h1 */
+
 h1 {
     text-align: center;
     margin-top: 20px;
     color: #333;
 }
 
-/* Estilo para el formulario */
+
 form {
     width: 300px;
     margin: 0 auto;
@@ -28,7 +28,7 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para las etiquetas de los campos */
+
 label {
     display: block;
     margin-bottom: 10px;
@@ -36,7 +36,7 @@ label {
     color: #333;
 }
 
-/* Estilo para los campos de entrada */
+
 .input {
     width: 80%;
     max-width: auto;
@@ -45,7 +45,7 @@ label {
     border-radius: 3px;
 }
 
-/* Estilo para el botón "Guardar" */
+
 .button {
     background-color: #007bff;
     color: #fff;
@@ -59,7 +59,7 @@ label {
     background-color: #0056b3;
 }
 
-/* Estilo para la tabla de resultados */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -74,7 +74,7 @@ th, td {
     text-align: center;
 }
 
-/* Estilo para el botón de cerrar sesión */
+
 .logout-button {
     background-color: #f41625;
     color: #fff;
@@ -88,7 +88,7 @@ th, td {
     display: inline;
 }
 
-/* Estilo para los mensajes de error */
+
 .errors {
     color: red;
     margin-top: 10px;
